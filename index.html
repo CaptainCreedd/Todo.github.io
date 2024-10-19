@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <nav class="side-menu">
+      <h2>Sections</h2>
+      <ul id="sectionList">
+        <li><a href="#" onclick="showSection('today')">Today</a></li>
+        <li><a href="#" onclick="showSection('upcoming')">Upcoming</a></li>
+        <li><a href="#" onclick="showSection('important')">Important</a></li>
+        <li><a href="#" onclick="showSection('assignment')">Assignment</a></li>
+        <li><a href="#" onclick="showSection('other')">Other</a></li>
+        <li><a href="#" onclick="addNewSection()">+ Add Section</a></li>
+      </ul>
+    </nav>
+
+    <div class="task-container">
+      <h1 id="section-title">Today's Tasks</h1>
+      <div class="input-container">
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <input type="date" id="taskDate">
+        <select id="priorityInput">
+          <option value="normal">Normal</option>
+          <option value="important">Important</option>
+          <option value="urgent">Urgent</option>
+        </select>
+        <button onclick="addTask()">Add</button>
+      </div>
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
